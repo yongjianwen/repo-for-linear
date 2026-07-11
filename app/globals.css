@@ -1,6 +1,8 @@
 :root {
   color-scheme: light dark;
   font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
 }
 
 body {
@@ -11,6 +13,75 @@ main {
   display: grid;
   min-height: 100vh;
   place-content: center;
+  gap: 1.25rem;
   padding: 2rem;
   text-align: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.logo {
+  --logo-start: #8b5cf6;
+  --logo-end: #06b6d4;
+  align-items: center;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle at 30% 20%, rgb(255 255 255 / 0.75), transparent 28%),
+    linear-gradient(135deg, var(--logo-start), var(--logo-end));
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 4rem rgb(8 13 35 / 0.35);
+  display: inline-grid;
+  justify-self: center;
+  place-items: center;
+  position: relative;
+  width: min(11rem, 48vw);
+}
+
+.logo__orbit {
+  border: 0.15rem solid rgb(255 255 255 / 0.55);
+  border-radius: 999px;
+  height: 72%;
+  position: absolute;
+  transform: rotate(-28deg);
+  width: 112%;
+}
+
+.logo__mark {
+  color: #ffffff;
+  font-size: clamp(3rem, 16vw, 5.5rem);
+  line-height: 1;
+  text-shadow: 0 0.5rem 1.5rem rgb(15 23 42 / 0.35);
+}
+
+.logo__label {
+  bottom: 1rem;
+  color: rgb(255 255 255 / 0.88);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.from-violet.to-cyan {
+  --logo-start: #8b5cf6;
+  --logo-end: #06b6d4;
+}
+
+.from-amber.to-pink {
+  --logo-start: #f59e0b;
+  --logo-end: #ec4899;
+}
+
+.from-emerald.to-lime {
+  --logo-start: #10b981;
+  --logo-end: #84cc16;
+}
+
+.from-sky.to-indigo {
+  --logo-start: #0ea5e9;
+  --logo-end: #6366f1;
 }
